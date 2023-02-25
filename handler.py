@@ -1,9 +1,23 @@
-import os
+import logging
+import time
+
+import server
+import ssh_server
+
+log = logging.getLogger(__name__)
 
 
 def hello(event, context):
     print("start")
-    os.system("/usr/sbin/sshd")
-    os.system("cloudflared tunnel --url ssh://localhost:22 --logfile ./cloudflared.log --metrics localhost:45678")
+
+    logging.basicConfig(level=logging.DEBUG)
+    log.debug("started")
+    ssh_server.start()
+
+    # os.system("bash -c './run.sh'")
+    time.sleep(10000)
     print("end")
-#
+
+
+if __name__ == "__main__":
+    hello(None, None)

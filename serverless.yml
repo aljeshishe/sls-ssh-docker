@@ -1,5 +1,5 @@
-org: aljeshishe3
-app: sls-ssh-docker
+# org: aljeshishe3
+# app: sls-ssh-docker
 service: sls-ssh-docker
 
 frameworkVersion: '3'
@@ -8,7 +8,7 @@ provider:
   name: aws
   runtime: python3.9
   region: eu-central-1
-  timeout: 60
+  timeout: 120
   ecr:
     images:
       appimage:
@@ -16,6 +16,5 @@ provider:
 
 functions:
   handler:
-    image:
-      name: 958783559395.dkr.ecr.eu-central-1.amazonaws.com/sls-ssh-docker
+    image: appimage
 

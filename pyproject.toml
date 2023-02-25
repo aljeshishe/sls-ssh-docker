@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "sls-ssh-docker"
+version = "0.1.0"
+description = ""
+authors = ["Aleksei Grachev <ax66@bk.ru>"]
+readme = "README.md"
+packages = [{include = "sls_ssh_docker"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.28.2"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+pytest = "^7.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
