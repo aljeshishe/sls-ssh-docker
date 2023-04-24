@@ -8,13 +8,24 @@ provider:
   name: aws
   runtime: python3.9
   region: eu-central-1
-  timeout: 120
+  timeout: 400
   ecr:
     images:
       appimage:
         path: ./
+#  iamRoleStatements:
+#    - Effect: Allow
+#      Action:
+#        - '*'
+#      Resource: 'arn:*:*:*:*:*'
+#  iam:
+#    role:
+#      statements:
+#        - Effect: "Allow"
+#          Action:
+#            - "s3:*"
+#          Resource: "*"
 
 functions:
   handler:
     image: appimage
-

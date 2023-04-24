@@ -2,7 +2,7 @@ import socket
 import sys
 
 import utils
-from ssh_server import Process
+from process import Process
 
 
 def start(hostname):

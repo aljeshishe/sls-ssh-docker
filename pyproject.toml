@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Aleksei Grachev <ax66@bk.ru>"]
 readme = "README.md"
-packages = [{include = "sls_ssh_docker"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"

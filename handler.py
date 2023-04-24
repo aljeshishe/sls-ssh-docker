@@ -1,8 +1,7 @@
 import logging
 import time
 
-import server
-import ssh_server
+import service
 
 log = logging.getLogger(__name__)
 
@@ -12,7 +11,7 @@ def hello(event, context):
 
     logging.basicConfig(level=logging.DEBUG)
     log.debug("started")
-    ssh_server.start()
+    service.start()
 
     # os.system("bash -c './run.sh'")
     time.sleep(10000)
